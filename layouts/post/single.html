@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+
+<h3>{{ .Title }}</h3>
+<h5><small class="text-muted">{{ .Date.Format .Site.Params.DateFormat }}</small></h5>
+<hr>
+{{ .Content }}
+
+{{ partial "footer.html" . }}

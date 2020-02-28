@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+<div class="jumbotron">
+	<h1 class="display-4">Hello!</h1>
+	<p class="lead">
+		欢迎来到我的时光机<br>
+		本站主要写一些实际工作中碰到的问题、自己学习的总结、各种折腾，还有一些乱七八糟的扯淡文<br>
+	</p>
+	<hr class="my-4">
+	<a class="btn btn-primary btn-sm" href="/post" role="button">文章列表</a>
+</div>
+<br>
+<h4>友情链接</h4>
+<br>
+{{ range .Site.Params.Link.Friends }}
+<a href="{{ .url }}" target="_blank">
+	<div class="media">
+		<img class="mr-3 rounded" style="width:64px; height:64px;" src="/images/cat.jpeg" alt="Generic placeholder image">
+		<div class="media-body">
+			<h5 class="mt-0">{{ .title }}</h5>
+			{{ .slogan }}
+		</div>
+	</div>
+</a>
+<br>
+{{ end }}
+{{ partial "footer.html" . }}
