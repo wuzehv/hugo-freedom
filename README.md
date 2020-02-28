@@ -12,14 +12,14 @@
 ### 使用
 ```
 cd sitedir
-git clone https://github.com/wuzehv/hugo-freedom.git themes/freedom
+git clone https://github.com/wuzehv/hugo-freedom.git themes/hugo-freedom
 ```
 
 ### 配置示例
 ``` toml
 baseURL = ""
 title = "Time Machine"
-theme = "freedom"
+theme = "hugo-freedom"
 copyright = "©2017-2020"
 
 languageCode = "zh-cn"
