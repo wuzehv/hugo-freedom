@@ -56,5 +56,5 @@ url = "mailto://bugfixeng@gmail.com"
 [[params.link.friends]]
 title = "夏木断弦"
 url = "https://blog.tangdongsheng.com/"
-slogan = "宠辱不惊,闲看庭前花开花落;去留无意,漫随天外云卷云舒"toml
+slogan = "宠辱不惊,闲看庭前花开花落;去留无意,漫随天外云卷云舒"
 ```
