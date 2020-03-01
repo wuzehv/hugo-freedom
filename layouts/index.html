@@ -14,7 +14,7 @@
 {{ range .Site.Params.Link.Friends }}
 <a href="{{ .url }}" target="_blank">
 	<div class="media">
-		<img class="mr-3 rounded" style="width:64px; height:64px;" src="/images/cat.jpeg" alt="Generic placeholder image">
+		<img class="mr-3 rounded" style="width:64px; height:64px;" src="{{ .pic }}" alt="Generic placeholder image">
 		<div class="media-body">
 			<h5 class="mt-0">{{ .title }}</h5>
 			{{ .slogan }}
