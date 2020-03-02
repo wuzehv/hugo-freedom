@@ -1,10 +1,15 @@
 {{ partial "header.html" . }}
-{{ range .Site.Taxonomies.tags }}
-<h5 class="overflow-auto">
-	<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light">
-		{{ .Page.Title }} <span class="badge badge-pill badge-warning">{{ .Count }}</span>
-	</a>
-</h5>
-<hr>
+{{ $url := urls.Parse .Permalink }}
+{{ if eq $url.Path "/tags/" }}
+	{{ range .Site.Taxonomies.tags }}
+	<h5 class="overflow-auto">
+		<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light">
+			{{ .Page.Title }} <span class="badge badge-pill badge-warning">{{ .Count }}</span>
+		</a>
+	</h5>
+	<hr>
+	{{ end }}
+{{ else }}
+	{{ partial "list.html" . }}
 {{ end }}
 {{ partial "footer.html" . }}
