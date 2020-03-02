@@ -16,4 +16,4 @@ git clone https://github.com/wuzehv/hugo-freedom.git themes/hugo-freedom
 ```
 
 ### 配置示例
-<p align="center"><img src="/config.example.toml" alt="default config"/></p>
+<a href="/config.example.toml">default config</a>
