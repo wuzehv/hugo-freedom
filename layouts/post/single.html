@@ -5,4 +5,12 @@
 <hr>
 {{ .Content }}
 <hr>
+{{ with .NextInSection }}
+Next: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+<br>
+{{ end }}
+{{ with .PrevInSection }}
+Prev: <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+{{ end }}
+<br>
 {{ partial "footer.html" . }}
