@@ -2,7 +2,9 @@
 <h3>{{ .Title }}</h3>
 <h5><small class="text-muted">{{ .Date.Format .Site.Params.DateFormat }}, {{ .WordCount }} Words, {{ .ReadingTime }} Minutes</small></h5>
 <hr>
+<div class="content">
 {{ .Content }}
+</div>
 <hr>
 {{ with .NextInSection }}
 Next: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
