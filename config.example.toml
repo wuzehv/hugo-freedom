@@ -5,6 +5,7 @@ copyright = "©2017-2020"
 
 DefaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
+enableEmoji = true
 
 [markup.highlight]
 codeFences = true

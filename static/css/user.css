@@ -1,15 +1,23 @@
+.container {
+	background: #fff;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
 	font-size: 0.9em;
 }
 
-ul.pagination{
+ul.pagination {
 	display: inline-flex;
 }
 
-.content img {
-	max-width: 100%;
-	height:auto;
+.content img, .summary img {
+	width: 100%;
+	height: auto;
 	border-radius: 5px;
 	box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.taglist a {
+	font-size: 1em;
 }

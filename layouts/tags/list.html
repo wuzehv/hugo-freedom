@@ -1,13 +1,13 @@
 {{ partial "header.html" . }}
 {{ $url := urls.Parse .Permalink }}
 {{ if eq $url.Path "/tags/" }}
-<div class="text-center">
-{{ range .Site.Taxonomies.tags }}
-<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light">
-	{{ .Page.Title }} <span class="badge badge-pill badge-warning">{{ .Count }}</span>
-</a>
-{{ end }}
-<div>
+<div class="text-center taglist">
+	{{ range .Site.Taxonomies.tags }}
+	<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light">
+		{{ .Page.Title }}<span class="badge badge-pill badge-warning">{{ .Count }}</span>
+	</a>
+	{{ end }}
+</div>
 <br>
 <hr>
 {{ else }}
