@@ -24,7 +24,7 @@ IcpUrl = "http://beian.miit.gov.cn"
 
 [[params.nav.custom]]
 title = "Posts"
-url = "/post"
+url = "/posts"
 
 [[params.nav.custom]]
 title = "Tags"
