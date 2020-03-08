@@ -2,10 +2,16 @@
 {{ $url := urls.Parse .Permalink }}
 {{ if eq $url.Path "/tags/" }}
 <div class="text-center taglist">
-	{{ range .Site.Taxonomies.tags }}
-	<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light">
+	{{ $i := 1 }}
+	{{ range sort .Site.Taxonomies.tags "Count" }}
+	<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light my-2">
 		{{ .Page.Title }}<span class="badge badge-pill badge-warning">{{ .Count }}</span>
-	</a>
+	</a>&emsp;
+	{{ if eq (mod $i 5) 0 }}
+	<br>
+	<br>
+	{{ end }}
+	{{ $i = add $i 1 }}
 	{{ end }}
 </div>
 <br>

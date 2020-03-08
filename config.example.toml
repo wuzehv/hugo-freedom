@@ -8,6 +8,9 @@ hasCJKLanguage = true
 enableEmoji = true
 buildFuture = true
 
+[taxonomies]
+tag = "tags"
+
 [markup.highlight]
 codeFences = true
 noClasses = true
