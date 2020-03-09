@@ -1,18 +1,29 @@
-.container {
-	background: #fff;
+@font-face {
+	font-family: "beautiful heart";
+	src : url('../font/beautiful-heart.ttf');
 }
 
-@font-face {
-	src : url('/font/beautiful-heart.ttf');
+.container {
+	background: #fff;
+	padding-top: 0 !important;
+}
+
+.navbar {
+	padding-bottom: 0 !important;
+}
+
+.navhr {
+	margin-top: 8px;
 }
 
 .navbar-brand {
-	font-family: 'beautiful heart';
+	font-family: "beautiful heart";
 	display: inline-block;
-	padding-top: .7125rem;
+	padding-top: .9rem;
 	padding-bottom: 0;
+	padding-left: .3rem;
 	margin-right: 1rem;
-	font-size: 2.25rem;
+	font-size: 2rem;
 	line-height: inherit;
 	white-space: nowrap;
 }
