@@ -3,7 +3,7 @@ title = "Time Machine"
 theme = "hugo-freedom"
 copyright = "©2017-2020"
 
-DefaultContentLanguage = "zh-cn"
+defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 enableEmoji = true
 buildFuture = true
@@ -24,7 +24,9 @@ author = "wuzehui"
 dateFormat = "2006-01-02"
 slogan = "~人生苦短，何必太认真~"
 ICP = "蒙ICP备18005213号"
-IcpUrl = "http://beian.miit.gov.cn"
+icpUrl = "http://beian.miit.gov.cn"
+description = "一个集技术、折腾、扯淡于一体的博客"
+welcome = "欢迎来到我的时光机!"
 
 [[params.nav.custom]]
 title = "Posts"
