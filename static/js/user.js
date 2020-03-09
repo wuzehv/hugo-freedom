@@ -1,0 +1,1 @@
+$('table').attr('class', 'table table-bordered table-striped table-dark');
