@@ -5,7 +5,7 @@
 	{{ $i := 1 }}
 	{{ range sort .Site.Taxonomies.tags "Count" }}
 	<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light my-2">
-		{{ .Page.Title }}<span class="badge badge-pill badge-warning">{{ .Count }}</span>
+		#{{ .Page.Title }} <em class="text-info">({{ .Count }})</em>
 	</a>&emsp;
 	{{ if eq (mod $i 5) 0 }}
 	<br>
