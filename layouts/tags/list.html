@@ -17,6 +17,12 @@
 <br>
 <hr>
 {{ else }}
-{{ partial "list.html" . }}
+	{{ $url := urls.Parse .Permalink }}
+	{{ if hasPrefix $url.Path "/tags" }}
+	{{ $tmp := split $url.Path "/" }}
+	<h5 class="pl-1">Tags: <span class="badge badge-pill badge-info">#{{ index $tmp 2 }}</span></h5>
+	<br>
+	{{ end }}
+	{{ partial "list.html" . }}
 {{ end }}
 {{ partial "footer.html" . }}

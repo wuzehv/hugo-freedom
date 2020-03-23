@@ -36,6 +36,7 @@ url = "/posts"
 
 [[params.nav.custom]]
 title = "Tags"
+# url必须为tags，对应默认生成的tags目录(当然代码里面也有部分硬编码)
 url = "/tags"
 
 [[params.nav.custom]]
