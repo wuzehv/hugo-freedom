@@ -4,26 +4,29 @@
 		{{ partial "head.html" . }}
 		<title>{{ .Title }}</title>
 	</head>
-	<body class="bg-secondary">
-		<div class="container shadow-sm p-3 my-2 bg-white rounded">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="{{ site.BaseURL }}">{{ .Site.Title }}</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						{{ range .Site.Params.Nav.Custom }}
-						<li class="nav-item">
-							{{ if or (eq .title "Tags") (eq .title "Posts") }}
-							<a class="nav-link" href="{{ .url }}">{{ .title }}</a>
-							{{ else }}
-							<a class="nav-link" href="{{ .url }}" target="_blank">{{ .title }}</a>
-							{{ end }}
-						</li>
-						{{ end }}
-					</ul>
-				</div>
-			</nav>
-			<hr class="navhr">
-			<br>
+	<body class="bg-light">
+		<div class="container-fluid bg-light">
+			<div class="row justify-content-md-center">
+				<div class="col-12 col-md-3 col-xl-2 side-bar"></div>
+				<main class="col-12 col-md-9 col-xl-8">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand" href="{{ site.BaseURL }}">{{ .Site.Title }}</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav">
+								{{ range .Site.Params.Nav.Custom }}
+								<li class="nav-item">
+									{{ if or (eq .title "Tags") (eq .title "Posts") }}
+									<a class="nav-link" href="{{ .url }}">{{ .title }}</a>
+									{{ else }}
+									<a class="nav-link" href="{{ .url }}" target="_blank">{{ .title }}</a>
+									{{ end }}
+								</li>
+								{{ end }}
+							</ul>
+						</div>
+					</nav>
+					<hr class="navhr">
+					<br>

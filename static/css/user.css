@@ -21,7 +21,6 @@
 	display: inline-block;
 	padding-top: .9rem;
 	padding-bottom: 0;
-	padding-left: .3rem;
 	margin-right: 1rem;
 	font-size: 2rem;
 	line-height: inherit;
@@ -48,6 +47,18 @@ ul.pagination {
 	box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
 }
 
+.content h3 {
+	font-size: 1.25rem;
+}
+
+.content h4 {
+	font-size: 1.1rem;
+}
+
+.content h5 {
+	font-size: 0.9rem;
+}
+
 .taglist a {
 	font-size: 1em;
 }
@@ -57,4 +68,34 @@ blockquote {
 	border-left: 5px solid #ccc;
 	padding: 1rem 0 2px 1rem;
 	color: #646464;
+}
+
+#TableOfContents ul:first-child {
+	overflow: auto;
+	list-style: none;
+	padding-left: 0px;
+}
+
+#TableOfContents li {
+	padding-bottom: 10px;
+}
+
+.toc {
+	position: sticky;
+	top: 4rem;
+	height: calc(100vh - 4rem);
+	overflow-y: auto;
+}
+
+.toc a {
+	color: #6c757d;
+}
+
+@media (max-width: 1200px) {
+	.toc {
+		display: none;
+	}
+	.side-bar {
+		display: none;
+	}
 }

@@ -1,13 +1,16 @@
 {{ if .IsHome }}
 <hr>
 {{ end }}
-<div class="alert alert-light text-center mb-0" role="alert">
+<div class="alert text-center mb-0" role="alert">
 	<a href="javascript:;" class="text-secondary">{{ .Site.Copyright }} {{ .Site.Params.Author }}</a> | 
 	<a href="{{ .Site.Params.IcpUrl }}" target="_blank" class="text-secondary">{{ .Site.Params.ICP }}</a>
 	<br>
 	Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
 	<br>
 	{{ .Site.Params.License | safeHTML }}
+</div>
+</main>
+{{ partial "toc.html" . }}
 </div>
 </div>
 {{ partial "script.html" . }}

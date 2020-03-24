@@ -12,6 +12,12 @@ enableRobotsTXT = true
 [taxonomies]
 tag = "tags"
 
+[markup]
+[markup.tableOfContents]
+endLevel = 5
+ordered = false
+startLevel = 2
+
 [markup.highlight]
 codeFences = true
 noClasses = true
