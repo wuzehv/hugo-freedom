@@ -2,7 +2,7 @@
 {{ partial "toc.html" . }}
 </div>
 <div class="row justify-content-md-center">
-	<div class="col-12 col-md-9 col-xl-8 alert text-center mb-0" role="alert">
+	<footer class="col-12 col-md-9 col-xl-8 alert text-center mb-0" role="alert">
 		{{ if .IsHome }}
 		<hr>
 		{{ end }}
@@ -12,7 +12,7 @@
 		Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
 		<br>
 		{{ .Site.Params.License | safeHTML }}
-	</div>
+	</footer>
 </div>
 </div>
 {{ partial "script.html" . }}
