@@ -1,16 +1,18 @@
-{{ if .IsHome }}
-<hr>
-{{ end }}
-<div class="alert text-center mb-0" role="alert">
-	<a href="javascript:;" class="text-secondary">{{ .Site.Copyright }} {{ .Site.Params.Author }}</a> | 
-	<a href="{{ .Site.Params.IcpUrl }}" target="_blank" class="text-secondary">{{ .Site.Params.ICP }}</a>
-	<br>
-	Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
-	<br>
-	{{ .Site.Params.License | safeHTML }}
-</div>
 </main>
 {{ partial "toc.html" . }}
+</div>
+<div class="row justify-content-md-center">
+	<div class="col-12 col-md-9 col-xl-8 alert text-center mb-0" role="alert">
+		{{ if .IsHome }}
+		<hr>
+		{{ end }}
+		<a href="javascript:;" class="text-secondary">{{ .Site.Copyright }} {{ .Site.Params.Author }}</a> | 
+		<a href="{{ .Site.Params.IcpUrl }}" target="_blank" class="text-secondary">{{ .Site.Params.ICP }}</a>
+		<br>
+		Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
+		<br>
+		{{ .Site.Params.License | safeHTML }}
+	</div>
 </div>
 </div>
 {{ partial "script.html" . }}
