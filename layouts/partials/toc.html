@@ -1,5 +1,6 @@
-<div class="col-xl-2 toc">
-	{{ if .TableOfContents }}
+{{ $showToc := .TableOfContents }}
+<div class="col-xl-2 {{ if $showToc -}}toc{{- end -}}">
+	{{ if $showToc }}
 	<h3>Toc</h3>
 	{{ .TableOfContents }}
 	{{ end }}
