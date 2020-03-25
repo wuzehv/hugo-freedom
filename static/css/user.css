@@ -82,8 +82,9 @@ blockquote {
 
 .toc {
 	position: sticky;
-	top: 4rem;
-	height: calc(100vh - 4rem);
+	position: -webkit-sticky;
+	top: 7rem;
+	height: calc(100vh - 7rem);
 	overflow-y: auto;
 }
 
