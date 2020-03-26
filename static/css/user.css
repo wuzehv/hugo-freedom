@@ -92,12 +92,6 @@ blockquote {
 	color: #6c757d;
 }
 
-.master {
-	position: sticky;
-	position: -webkit-sticky;
-	top: 0;
-}
-
 @media (max-width: 1200px) {
 	.toc {
 		display: none;
