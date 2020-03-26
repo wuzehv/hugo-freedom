@@ -1,9 +1,11 @@
 {{ partial "header.html" . }}
-<h3>{{ .Title }}</h3>
-<h5>
-	{{ partial "front.html" . }}
-</h5>
-<hr>
+<div class="master bg-light">
+	<h3>{{ .Title }}</h3>
+	<h5>
+		{{ partial "front.html" . }}
+	</h5>
+	<hr>
+</div>
 <div class="content">
 	{{ .Content }}
 </div>
