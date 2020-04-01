@@ -1,20 +1,26 @@
 <meta charset="utf-8">
+<title>{{ .Title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{{ if isset .Params "tags" }}
-<meta content="{{ delimit .Params.Tags ", " }}" name="keywords">
-{{ else }}
-	{{ $keywords := slice }}
-	{{ range .Site.Taxonomies.tags }}
-	{{ $keywords = $keywords | append (slice .Page.Title) }}
-	{{ end }}
-	<meta content="{{ delimit $keywords ", " }}" name="keywords">
+{{ $keywords := slice }}
+{{ range .Site.Taxonomies.tags }}
+{{ $keywords = $keywords | append (slice .Page.Title) }}
 {{ end }}
-<meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" property="og:title">
-<meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Summary }}{{ end }}" property="og:description">
+<meta name="keywords" content="{{ delimit $keywords ", " }}">
 
+<meta name="description" content="{{ .Site.Params.description }}">
+
+<meta property="og:url" content="{{ .URL | absURL }}">
+<meta property="og:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Summary }}{{ end }}">
+{{ if isset .Params "tags" }}
+<meta property="og:tag" content="{{ delimit .Params.Tags ", " }}">
+{{ end }}
+
+<!-- BEGIN CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/css/prism.css">
 <link rel="stylesheet" href="/css/user.css">
+<!-- END CSS -->
 </style>
