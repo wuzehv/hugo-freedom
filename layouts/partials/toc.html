@@ -1,5 +1,5 @@
 {{ $showToc := .TableOfContents }}
-<div class="col-xl-2 {{ if $showToc -}}toc{{- end -}}">
+<div class="col-xl my-4 {{ if $showToc -}}toc{{- end -}}">
 	{{ if $showToc }}
 	<h3>Toc</h3>
 	{{ .TableOfContents }}

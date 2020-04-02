@@ -1,0 +1,8 @@
+<div class="my-3">
+    <ul class="post-copyright p-3">
+        <li><strong>原文作者：</strong><a class="text-secondary" rel="author" href="{{ .Site.BaseURL }}">{{ .Site.Params.author }}</a></li>
+        <li><strong>原文链接：</strong><a class="text-secondary" href="{{ .Permalink | absURL }}">{{ .Permalink | absURL }}</a></li>
+        <li><strong>发表日期：</strong>{{ .Date.Format .Site.Params.DateFormat }}</li>
+        <li><strong>版权声明：</strong>{{ .Site.Params.License | safeHTML }}
+    </ul>
+</div>

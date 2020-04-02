@@ -7,6 +7,7 @@
 <div class="content">
 	{{ .Content }}
 </div>
+{{ partial "copyright.html" . }}
 <hr>
 {{ with .NextInSection }}
 Next: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>

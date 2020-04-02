@@ -9,7 +9,7 @@
 }
 
 .navbar {
-	padding-bottom: 0 !important;
+	padding: 0 !important;
 }
 
 .navhr {
@@ -96,4 +96,19 @@ blockquote {
 	.side-bar {
 		display: none;
 	}
+}
+
+.post-copyright {
+	line-height: 2;
+	border-left: 0.3em solid #ff5000;
+	background-color: #eee;
+	list-style: none;
+}
+
+.post-copyright a {
+	border-bottom: 1px solid #999;
+}
+
+.post-copyright a:hover {
+	text-decoration: none;
 }
