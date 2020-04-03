@@ -3,11 +3,6 @@
 	src : url('../font/beautiful-heart.ttf');
 }
 
-.container {
-	background: #fff;
-	padding-top: 0 !important;
-}
-
 .navbar {
 	padding: 0 !important;
 }
@@ -42,15 +37,15 @@ ul.pagination {
 	box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
 }
 
-.content h3 {
+.post-content h3 {
 	font-size: 1.25rem;
 }
 
-.content h4 {
+.post-content h4 {
 	font-size: 1.1rem;
 }
 
-.content h5 {
+.post-content h5 {
 	font-size: 0.9rem;
 }
 

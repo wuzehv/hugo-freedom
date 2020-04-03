@@ -1,10 +1,11 @@
 {{ partial "header.html" . }}
+<div class="content bg-white p-3 rounded">
 <h3>{{ .Title }}</h3>
 <h5>
 	{{ partial "front.html" . }}
 </h5>
 <hr>
-<div class="content">
+<div class="post-content">
 	{{ .Content }}
 </div>
 {{ partial "copyright.html" . }}
@@ -16,5 +17,5 @@ Next: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
 {{ with .PrevInSection }}
 Prev: <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
 {{ end }}
-<br>
+</div>
 {{ partial "footer.html" . }}
