@@ -98,6 +98,8 @@ blockquote {
 	border-left: 0.3em solid #ff5000;
 	background-color: #eee;
 	list-style: none;
+	white-space: nowrap;
+	overflow-x: auto;
 }
 
 .post-copyright a {
