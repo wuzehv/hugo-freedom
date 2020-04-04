@@ -6,21 +6,19 @@
 		{{ .Site.Params.Description }}<br>
 	</p>
 	<hr class="my-4">
-	<a class="btn btn-primary btn-sm" href="/posts" role="button">文章列表</a>
+	<a class="btn btn-primary btn-sm" href="/posts" role="button">All Posts</a>
 </div>
 <br>
-<h4>友情链接</h4>
-<br>
+
+<h5 class="pb-1">友情链接</h5>
 {{ range .Site.Params.Link.Friends }}
-<a href="{{ .url }}" target="_blank">
-	<div class="media">
-		<img class="mr-3 rounded" style="width:64px; height:64px;" src="{{ .pic }}" alt="Generic placeholder image">
-		<div class="media-body">
-			<h5 class="mt-0">{{ .title }}</h5>
-			{{ .slogan }}
-		</div>
+<div class="media">
+	<img class="mr-3 rounded" style="width:64px; height:64px;" src="{{ .pic }}">
+	<div class="media-body text-secondary">
+		<h6 class="mt-0"><a href="{{ .url }}" target="_blank">{{ .title }}</a></h6>
+		{{ .slogan }}
 	</div>
-</a>
+</div>
 <br>
 {{ end }}
 <hr>

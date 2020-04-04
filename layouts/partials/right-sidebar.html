@@ -1,0 +1,9 @@
+{{ $showToc := .TableOfContents }}
+<div class="col-xl right-sidebar my-4 {{ if $showToc -}}toc{{- end -}}">
+	{{ if $showToc }}
+	<h3>Toc</h3>
+	{{ .TableOfContents }}
+	{{ else }}
+	{{ partial "post-latest.html" .}}
+	{{ end }}
+</div>

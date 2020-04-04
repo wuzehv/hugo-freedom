@@ -26,15 +26,25 @@ guessSyntax = true
 [markup.goldmark.renderer]
 unsafe = true
 
+# 这里放自定义参数
 [params]
 author = "吴泽辉"
+email = "bugfixeng@gmail.com"
 dateFormat = "2006-01-02"
+# 显示在左侧sidebar logo下面
+logo = "/images/cat.jpeg"
 slogan = "~人生苦短，何必太认真~"
-ICP = "蒙ICP备18005213号"
-icpUrl = "http://beian.miit.gov.cn"
+
 description = "一个集技术、折腾、扯淡于一体的博客"
 welcome = "欢迎来到我的时光机!"
+
+ICP = "蒙ICP备18005213号"
+icpUrl = "http://beian.miit.gov.cn"
+
 license = "本文章为原创，采用《<a class=\"text-secondary\" rel=\"license\" target=\"_blank\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>》进行许可。"
+
+# 最新文章展示条数
+latestLen = 10
 
 [[params.nav.custom]]
 title = "Posts"
@@ -48,10 +58,6 @@ url = "/tags"
 [[params.nav.custom]]
 title = "Github"
 url = "https://github.com/wuzehv"
-
-[[params.nav.custom]]
-title = "Email"
-url = "mailto://bugfixeng@gmail.com"
 
 [[params.link.friends]]
 pic = "https://blog.tangdongsheng.com/kid.jpg"

@@ -7,7 +7,7 @@
 		<div class="container-fluid">
 			<div class="row justify-content-md-center bg-dark">
 				<header class="col-12 col-xl-7">
-					<nav class="navbar navbar-expand-md navbar-dark">
+					<nav class="navbar navbar-expand-sm navbar-dark">
 						<a class="navbar-brand" href="{{ site.BaseURL }}">{{ .Site.Title }}</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
@@ -29,10 +29,7 @@
 				</header>
 			</div>
 			<div class="row justify-content-md-center">
-				<div class="col-12 col-md-3 col-xl mt-4 side-bar">
-					<figure class="figure bg-white p-3 rounded">
-						<img src="/images/cat.jpeg" class="figure-img img-fluid rounded">
-						<figcaption class="figure-caption">{{ .Site.Params.slogan }}</figcaption>
-					</figure>
+				<div class="col-12 col-md-3 col-xl mt-4 left-sidebar">
+					{{ partial "left-sidebar.html" . }}
 				</div>
 				<main class="col-12 col-md-9 col-xl-7 mt-4">
