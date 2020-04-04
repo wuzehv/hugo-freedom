@@ -88,6 +88,9 @@ blockquote {
 	.toc {
 		display: none;
 	}
+}
+
+@media (max-width: 850px) {
 	.side-bar {
 		display: none;
 	}
