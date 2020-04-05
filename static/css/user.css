@@ -90,7 +90,7 @@ blockquote {
 	}
 }
 
-@media (max-width: 850px) {
+@media (max-width: 992px) {
 	.left-sidebar {
 		display: none;
 	}
@@ -111,6 +111,10 @@ blockquote {
 
 .post-copyright a:hover {
 	text-decoration: none;
+}
+
+.list-group {
+	font-size: 0.9em;
 }
 
 .list-group .email {
