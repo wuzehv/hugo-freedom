@@ -1,0 +1,5 @@
+{{ $wordcount := 0 }}
+{{ range .Site.RegularPages }}
+{{ $wordcount = add $wordcount (.Content | countwords) }}
+{{ end }}
+{{ $wordcount }}

@@ -112,3 +112,7 @@ blockquote {
 .post-copyright a:hover {
 	text-decoration: none;
 }
+
+.list-group .email {
+	word-break: break-all;
+}

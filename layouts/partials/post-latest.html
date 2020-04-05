@@ -2,7 +2,7 @@
 	<li href="#" class="list-group-item list-group-item-action active bg-info">
 		最新文章
 	</li>
-	{{ range first .Site.Params.latestLen (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+	{{ range first .Site.Params.latestLen (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 	<li class="list-group-item">
 		<a class="text-secondary" href="{{ .Permalink }}">{{ .Title }}</a>
 	</li>

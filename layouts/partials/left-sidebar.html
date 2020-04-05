@@ -4,9 +4,8 @@
 		<p class="card-text text-secondary">{{ .Site.Params.slogan }}</p>
 	</div>
 	<ul class="list-group list-group-flush">
-		<li class="list-group-item text-info">文章总数：</li>
-		<li class="list-group-item text-info">共计写了200字</li>
-		<li class="list-group-item text-info">博客运行几年几个月</li>
-		<li class="list-group-item"><a href="mailto://{{ .Site.Params.email }}">Email: {{ .Site.Params.email }}</a></li>
+		<li class="list-group-item text-info">文章总数: {{ len .Site.RegularPages }}篇</li>
+		<li class="list-group-item text-info">共计写了: {{- partial "wordcount.html" . }}字</li>
+		<li class="list-group-item email">Email: <a href="mailto://{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
 	</ul>
 </div>
