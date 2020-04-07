@@ -60,7 +60,16 @@ title = "Github"
 url = "https://github.com/wuzehv"
 
 [[params.link.friends]]
-pic = "https://blog.tangdongsheng.com/kid.jpg"
 title = "夏木断弦"
 url = "https://blog.tangdongsheng.com/"
 slogan = "宠辱不惊,闲看庭前花开花落;去留无意,漫随天外云卷云舒"
+
+[[params.link.friends]]
+title = "一包小浣熊里五张卡"
+url = "https://zhangxi.site/"
+slogan = "Live your life with passion! With some drive!"
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"

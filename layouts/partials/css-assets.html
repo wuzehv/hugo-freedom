@@ -1,0 +1,12 @@
+<!-- css -->
+{{- $bootstrap := resources.Get "css/bootstrap.min.css" -}}
+{{- $prism := resources.Get "css/prism.css" -}}
+{{- $user := resources.Get "css/user.css" -}}
+
+{{- $css := .Scratch -}}
+{{- $css.Add "css" (slice $bootstrap $prism $user) -}}
+
+{{- $blogcss := $css.Get "css" | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
+
+{{- .Scratch.Set "blogcss" $blogcss.RelPermalink -}}
+{{- .Scratch.Set "blogcssintegrity" $blogcss.Data.Integrity -}}
