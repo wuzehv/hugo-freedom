@@ -1,7 +1,7 @@
 <div class="card">
 	<img class="card-img-top" src="{{ .Site.Params.logo }}" alt="{{ .Title }}">
 	<div class="card-body">
-		<p class="card-text text-secondary text-center">{{ .Site.Params.slogan }}</p>
+		<p class="card-text text-secondary text-center"><small>{{ .Site.Params.slogan }}</small></p>
 	</div>
 	<ul class="list-group list-group-flush">
 		<li class="list-group-item text-info">文章总数: {{ len .Site.RegularPages }}篇</li>
