@@ -1,0 +1,13 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<ul class="list-group list-group-flush mt-3 related">
+	<li href="#" class="list-group-item list-group-item-action active bg-info">
+		相关文章
+	</li>
+	{{ range . }}
+	<li class="list-group-item">
+		<a class="text-secondary" href="{{ .Permalink }}">{{ .Title }}</a>
+	</li>
+	{{ end }}
+</ul>
+{{ end }}

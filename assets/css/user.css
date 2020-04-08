@@ -124,3 +124,10 @@ blockquote {
 .right-sidebar, .left-sidebar {
 	max-width: 265px !important;
 }
+
+.related {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	overflow-y: auto;
+}
