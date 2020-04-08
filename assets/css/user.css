@@ -120,3 +120,7 @@ blockquote {
 .list-group .email {
 	word-break: break-all;
 }
+
+.right-sidebar, .left-sidebar {
+	max-width: 265px !important;
+}
