@@ -7,7 +7,7 @@
 	<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light my-2">
 		#{{ .Page.Title }} <em class="text-info">({{ .Count }})</em>
 	</a>&emsp;
-	{{ if eq (mod $i 5) 0 }}
+	{{ if eq (mod $i 2) 0 }}
 	<br>
 	<br>
 	{{ end }}
