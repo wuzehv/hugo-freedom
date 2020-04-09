@@ -1,4 +1,6 @@
-{{ $showToc := .TableOfContents }}
+<!-- 32代表只有空的nav标签，也即没有目录，这时候不显示toc -->
+<!-- <nav id="TableOfContents"></nav> -->
+{{ $showToc := gt (.TableOfContents | len) 32 }}
 <div class="col-xl right-sidebar mt-4 {{ if $showToc -}}toc{{- end -}}">
 	{{ if $showToc }}
 	<h3>Toc</h3>
