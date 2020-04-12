@@ -18,13 +18,11 @@ endLevel = 5
 ordered = false
 startLevel = 2
 
+# 配合prism来显示高亮
 [markup.highlight]
 codeFences = true
 noClasses = true
 guessSyntax = true
-
-[markup.goldmark.renderer]
-unsafe = true
 
 # 这里放自定义参数
 [params]
@@ -46,6 +44,7 @@ license = "本文章为原创，采用《<a class=\"text-secondary\" rel=\"licen
 # 最新文章展示条数
 latestLen = 10
 
+# 导航
 [[params.nav.custom]]
 title = "Posts"
 url = "/posts"
@@ -59,6 +58,7 @@ url = "/tags"
 title = "Github"
 url = "https://github.com/wuzehv"
 
+# 友情链接
 [[params.link.friends]]
 title = "夏木断弦"
 url = "https://blog.tangdongsheng.com/"
@@ -69,6 +69,39 @@ title = "一包小浣熊里五张卡"
 url = "https://zhangxi.site/"
 slogan = "Live your life with passion! With some drive!"
 
+# 标签描述
+[[params.tag.show]]
+title = "Nginx"
+desc = "高性能web server"
+[[params.tag.show]]
+title = "Git"
+desc = "分布式版本控制系统"
+[[params.tag.show]]
+title = "摄影"
+desc = "用摄影来记录时光"
+[[params.tag.show]]
+title = "Emacs"
+desc = "反正我是用不明白神的编辑器"
+[[params.tag.show]]
+title = "杂项"
+desc = "谁还不折腾点啥"
+[[params.tag.show]]
+title = "扯淡"
+desc = "一本正经的胡说八道"
+[[params.tag.show]]
+title = "c语言"
+desc = "我的第一门编译型语言"
+[[params.tag.show]]
+title = "Linux"
+desc = "专属极客的操作系统"
+[[params.tag.show]]
+title = "PHP"
+desc = "不用多说，\"世界上最好的语言是也\""
+[[params.tag.show]]
+title = "MySQL"
+desc = "使用最广泛的开源RDBMS"
+
+# 资源文件
 [module]
 [[module.mounts]]
 source = "assets"

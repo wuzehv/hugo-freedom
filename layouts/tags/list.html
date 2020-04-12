@@ -1,28 +1,35 @@
 {{ partial "header.html" . }}
 {{ $url := urls.Parse .Permalink }}
 {{ if eq $url.Path "/tags/" }}
-<div class="text-center taglist">
-	{{ $i := 1 }}
-	{{ range sort .Site.Taxonomies.tags "Count" }}
-	<a href="{{ .Page.Permalink }}" class="badge badge-pill badge-light my-2">
-		#{{ .Page.Title }} <em class="text-info">({{ .Count }})</em>
-	</a>&emsp;
-	{{ if eq (mod $i 2) 0 }}
-	<br>
-	<br>
-	{{ end }}
-	{{ $i = add $i 1 }}
-	{{ end }}
+<div class="taglist mb-3">
+	<div class="list-group">
+		{{ range sort .Site.Taxonomies.tags "Count" }}
+		<a href="{{ .Page.Permalink }}" class="list-group-item list-group-item-action flex-column align-items-start">
+			<div class="d-flex w-100 justify-content-between">
+				<h5 class="mb-1">
+					#{{ .Page.Title }} <em class="text-info">({{ .Count }})</em>
+				</h5>
+				<small>{{ (index . 0).Date.Format site.Params.DateFormat }}</small>
+			</div>
+			<p class="mt-1 mb-1">
+				{{ $currentTag := .Page.Title }}
+				{{ range site.Params.tag.show }}
+				{{ if eq .title $currentTag }}
+				{{ .desc }}
+				{{ end }}
+				{{ end }}
+			</p>
+		</a>
+		{{ end }}
+	</div>
 </div>
-<br>
-<hr>
 {{ else }}
-	{{ $url := urls.Parse .Permalink }}
-	{{ if hasPrefix $url.Path "/tags" }}
-	{{ $tmp := split $url.Path "/" }}
-	<h5 class="pl-1">Tag: <span class="badge badge-pill badge-info">#{{ index $tmp 2 }}</span></h5>
-	<br>
-	{{ end }}
-	{{ partial "list.html" . }}
+{{ $url := urls.Parse .Permalink }}
+{{ if hasPrefix $url.Path "/tags" }}
+{{ $tmp := split $url.Path "/" }}
+<h5 class="pl-1">Tag: <span class="badge badge-pill badge-info">#{{ index $tmp 2 }}</span></h5>
+<br>
+{{ end }}
+{{ partial "list.html" . }}
 {{ end }}
 {{ partial "footer.html" . }}
