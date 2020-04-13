@@ -1,24 +1,29 @@
 {{ partial "header.html" . }}
 {{ $url := urls.Parse .Permalink }}
 {{ if eq $url.Path "/tags/" }}
+<!-- 整理tag切片按最新文章时间倒序 -->
+{{ $tags := slice }}
+{{ range .Site.Taxonomies.tags }}
+	{{ $tmp := dict "title" .Page.Title "count" .Count "date" ((index . 0).Date.Format site.Params.DateFormat) "link" .Page.Permalink }}
+	{{ $currentTag := .Page.Title }}
+	{{ range site.Params.tag.show }}
+		{{ if eq .title $currentTag }}
+			{{ $tmp = merge $tmp (dict "desc" .desc) }}
+		{{ end }}
+	{{ end }}
+	{{ $tags = $tags | append $tmp }}
+{{ end }}
 <div class="taglist mb-3">
 	<div class="list-group">
-		{{ range sort .Site.Taxonomies.tags "Count" "desc" }}
-		<a href="{{ .Page.Permalink }}" class="list-group-item list-group-item-action flex-column align-items-start">
+		{{ range sort $tags "date" "desc" }}
+		<a href="{{ .link }}" class="list-group-item list-group-item-action flex-column align-items-start">
 			<div class="d-flex w-100 justify-content-between">
 				<h5 class="mb-1">
-					#{{ .Page.Title }} <em class="text-info">({{ .Count }})</em>
+					#{{ .title }} <em class="text-info">({{ .count }})</em>
 				</h5>
-				<small>{{ (index . 0).Date.Format site.Params.DateFormat }}</small>
+				<small>{{ .date }}</small>
 			</div>
-			<p class="mt-1 mb-1">
-				{{ $currentTag := .Page.Title }}
-				{{ range site.Params.tag.show }}
-				{{ if eq .title $currentTag }}
-				{{ .desc }}
-				{{ end }}
-				{{ end }}
-			</p>
+			<p class="mt-1 mb-1">{{ .desc }}</p>
 		</a>
 		{{ end }}
 	</div>
