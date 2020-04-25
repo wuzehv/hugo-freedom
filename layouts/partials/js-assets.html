@@ -1,11 +1,10 @@
 <!-- js -->
-{{- $jquery := resources.Get "js/jquery-3.0.0.min.js" -}}
 {{- $bootstrap := resources.Get "js/bootstrap.min.js" -}}
 {{- $prism := resources.Get "js/prism.js" -}}
 {{- $user := resources.Get "js/user.js" -}}
 
 {{- $js := .Scratch -}}
-{{- $js.Add "js" (slice $jquery $bootstrap $prism $user) -}}
+{{- $js.Add "js" (slice $bootstrap $prism $user) -}}
 
 {{- $blogjs := $js.Get "js" | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint -}}
 
