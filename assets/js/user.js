@@ -9,20 +9,37 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 		btn: $("#search-btn"),
 		input: $("#search-input"),
 		source: {
-			"_source": ["uri", "title", "tags"],
-			"query": {
-				"match": {
-					"content": ''
+			_source: ["uri", "title", "tags"],
+			query : { 
+				dis_max : { 
+					queries : [
+						{
+							match : {
+								title : { 
+									query : '', 
+									boost : 4,
+								}
+							} 
+						},
+						{
+							match : {
+								content : { 
+									query : '', 
+									boost : 2,
+								}
+							} 
+						},
+					]	
 				}
 			},
-			"highlight": {
-				"pre_tags": ["<code>"],
-				"post_tags": ["</code>"],
-				"fields": {
-					"content": {}
+			highlight: {
+				pre_tags: ["<code>"],
+				post_tags: ["</code>"],
+				fields: {
+					content: {}
 				}
 			},
-			"size": 5
+			size: 5
 		},
 		_width: function() {
 			return $(window).width() >= 960 ? '960px' : '90%';
@@ -31,11 +48,12 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 			var _this = this;
 			this.btn.click(function() {
 				var content = $.trim(_this.input.val());
-				if (content.length < 3) {
+				if (content.length < 2) {
 					return false;
 				}
 
-				_this.source.query.match.content = content;
+				_this.source.query.dis_max.queries[0].match.title.query = content;
+				_this.source.query.dis_max.queries[1].match.content.query = content;
 				var source = JSON.stringify(_this.source);
 
 				$.ajax({
@@ -71,8 +89,12 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 			if (data.hits.hits.length > 0) {
 				var content = data.hits.hits;
 				for (var i in content) {
+					console.log(content[i].highlight);
 					res += "<div class=\"pb-3 mt-3 border border-top-0 border-left-0 border-right-0 border-info\"><h5><a href='/posts" + content[i]._source.uri + "'>" + content[i]._source.title + "</a></h5>";
-					res += content[i].highlight.content[0] + "</div>";
+					if (content[i].highlight !== undefined) {
+						res += content[i].highlight.content[0];
+					}
+					res += "</div>"
 				}
 			} else {
 				res += "<div class=\"alert alert-danger text-center\" role=\"alert\">" + 
