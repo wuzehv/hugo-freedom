@@ -67,12 +67,12 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 		},
 		// json解析并生成html元素返回
 		render: function(data) {
-			var res = "<div class=\"p-3\">"
+			var res = "<div class=\"pl-5 pr-5 pb-5 pt-1\">"
 			if (data.hits.hits.length > 0) {
 				var content = data.hits.hits;
 				for (var i in content) {
-					res += "<h5><a href='/posts" + content[i]._source.uri + "'>" + content[i]._source.title + "</a></h5>";
-					res += "<p>" + content[i].highlight.content[0] + "</p>";
+					res += "<div class=\"pb-3 mt-3 border border-top-0 border-left-0 border-right-0 border-info\"><h5><a href='/posts" + content[i]._source.uri + "'>" + content[i]._source.title + "</a></h5>";
+					res += content[i].highlight.content[0] + "</div>";
 				}
 			} else {
 				res += "<div class=\"alert alert-danger text-center\" role=\"alert\">" + 

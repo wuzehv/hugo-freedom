@@ -1,8 +1,5 @@
 # hugo-freedom主题
 
-### 项目当前状态
-幼儿期
-
 ### 在线预览
 [我的博客](https://liangjun.work)
 
