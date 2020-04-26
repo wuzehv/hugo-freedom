@@ -5,10 +5,25 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 (function() {
 	var Search = {
 		// 搜索展示的数据条数
-		url: "https://liangjun.work/es/es/_search?q=content:",
-		size: 5,
+		url: "https://liangjun.work/es/es/_search?source_content_type=application/json&source=",
 		btn: $("#search-btn"),
 		input: $("#search-input"),
+		source: {
+			"_source": ["uri", "title", "tags"],
+			"query": {
+				"match": {
+					"content": ''
+				}
+			},
+			"highlight": {
+				"pre_tags": ["<code>"],
+				"post_tags": ["</code>"],
+				"fields": {
+					"content": {}
+				}
+			},
+			"size": 5
+		},
 		_width: function() {
 			return $(window).width() >= 960 ? '960px' : '90%';
 		},
@@ -20,8 +35,11 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 					return false;
 				}
 
+				_this.source.query.match.content = content;
+				var source = JSON.stringify(_this.source);
+
 				$.ajax({
-					url: _this.url + content + "&size=" + _this.size + "&source={"highlight" : {"fields" : {"desc" : {}}}"
+					url: _this.url + source,
 					beforeSend: function() {
 						_this.load = layer.load(1);
 						_this.btn.attr('disabled', 'disabled');
@@ -54,6 +72,7 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 				var content = data.hits.hits;
 				for (var i in content) {
 					res += "<h5><a href='/posts" + content[i]._source.uri + "'>" + content[i]._source.title + "</a></h5>";
+					res += "<p>" + content[i].highlight.content[0] + "</p>";
 				}
 			} else {
 				res += "<div class=\"alert alert-danger text-center\" role=\"alert\">" + 
@@ -66,9 +85,5 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 		}
 	};
 
-	// Search.test();
 	Search.bind();
 })();
-// $.get("https://liangjun.work/es/es/_search?q=content:fulltext index&size=5", '', function(data) {
-// 	console.log(data);
-// });
