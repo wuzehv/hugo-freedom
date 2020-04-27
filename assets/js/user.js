@@ -89,7 +89,6 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 			if (data.hits.hits.length > 0) {
 				var content = data.hits.hits;
 				for (var i in content) {
-					console.log(content[i].highlight);
 					res += "<div class=\"pb-3 mt-3 border border-top-0 border-left-0 border-right-0 border-info\"><h5><a href='/posts" + content[i]._source.uri + "'>" + content[i]._source.title + "</a></h5>";
 					if (content[i].highlight !== undefined) {
 						res += content[i].highlight.content[0];
