@@ -132,3 +132,8 @@ blockquote {
 	top: 0;
 	overflow-y: auto;
 }
+
+/* 搜索 */
+#search-result-box code {
+	font-size: 100%;
+}

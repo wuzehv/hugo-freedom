@@ -66,6 +66,7 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 						layer.close(_this.load);
 						var html = _this.render(data);
 						layer.open({
+							id: "search-result-box",
 							type: 1,
 							title: '检索结果',
 							skin: 'layui-layer-rim',
