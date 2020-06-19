@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		{{ partial "head.html" . }}
+		{{- partial "head.html" . -}}
 	</head>
 	<body class="bg-light text-dark">
 		<div class="container-fluid">
 			<div class="row justify-content-md-center bg-dark">
 				<header class="col-12 col-xl-7">
 					<nav class="navbar navbar-expand-md navbar-dark">
-						<a class="navbar-brand" href="{{ site.BaseURL }}">{{ .Site.Title }}</a>
+						<a class="navbar-brand" href="{{- site.BaseURL -}}">{{- .Site.Title -}}</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse" id="navbarNav">
 							<ul class="navbar-nav mr-auto">
-								{{ range .Site.Params.Nav.Custom }}
+								{{- range .Site.Params.Nav.Custom -}}
 								<li class="nav-item">
-									{{ if or (eq .title "Tags") (eq .title "Posts") }}
-									<a class="nav-link" href="{{ .url }}">{{ .title }}</a>
-									{{ else }}
-									<a class="nav-link" href="{{ .url }}" target="_blank">{{ .title }}</a>
-									{{ end }}
+									{{- if or (eq .title "Tags") (eq .title "Posts") -}}
+									<a class="nav-link" href="{{- .url -}}">{{- .title -}}</a>
+									{{- else -}}
+									<a class="nav-link" href="{{- .url -}}" target="_blank">{{- .title -}}</a>
+									{{- end -}}
 								</li>
-								{{ end }}
+								{{- end -}}
 							</ul>
 							<div class="form-inline my-2 my-lg-0">
 								<input class="form-control mr-sm-2" id="search-input" placeholder="Search" aria-label="Search">
@@ -34,6 +34,6 @@
 			</div>
 			<div class="row justify-content-md-center">
 				<div class="col-12 col-lg-3 col-xl mt-4 left-sidebar">
-					{{ partial "left-sidebar.html" . }}
+					{{- partial "left-sidebar.html" . -}}
 				</div>
 				<main class="col-12 col-lg-9 col-xl-7 mt-4">

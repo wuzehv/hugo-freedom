@@ -1,23 +1,23 @@
 <meta charset="utf-8">
-<title>{{ .Title }}</title>
+<title>{{- .Title -}}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{{ $keywords := slice }}
-{{ range .Site.Taxonomies.tags }}
-{{ $keywords = $keywords | append (slice .Page.Title) }}
-{{ end }}
-<meta name="keywords" content="{{ delimit $keywords ", " }}">
+{{- $keywords := slice -}}
+{{- range .Site.Taxonomies.tags -}}
+{{- $keywords = $keywords | append (slice .Page.Title) -}}
+{{- end -}}
+<meta name="keywords" content="{{- delimit $keywords ", " -}}">
 
-<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="description" content="{{- .Site.Params.description -}}">
 
-<meta property="og:url" content="{{ .Permalink | absURL }}">
-<meta property="og:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
-<meta property="og:description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Summary }}{{ end }}">
-{{ if isset .Params "tags" }}
-<meta property="og:tag" content="{{ delimit .Params.Tags ", " }}">
-{{ end }}
+<meta property="og:url" content="{{- .Permalink | absURL -}}">
+<meta property="og:title" content="{{- $isHomePage := eq .Title .Site.Title -}}{{- .Title -}}{{- if eq $isHomePage false -}} - {{- .Site.Title -}}{{- end -}}">
+<meta property="og:description" content="{{- $isHomePage := eq .Title .Site.Title -}}{{- .Site.Params.description -}}{{- if eq $isHomePage false -}} - {{- .Summary -}}{{- end -}}">
+{{- if isset .Params "tags" -}}
+<meta property="og:tag" content="{{- delimit .Params.Tags ", " -}}">
+{{- end -}}
 
 <!-- BEGIN CSS -->
-{{ partial "css-assets.html" . }}
-<link rel="stylesheet" href='{{ .Scratch.Get "blogcss" }}' integrity='{{ .Scratch.Get "blogcssintegrity" }}'>
+{{- partial "css-assets.html" . -}}
+<link rel="stylesheet" href='{{- .Scratch.Get "blogcss" -}}' integrity='{{- .Scratch.Get "blogcssintegrity" -}}'>
 <!-- END CSS -->

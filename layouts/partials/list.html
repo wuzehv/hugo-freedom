@@ -1,20 +1,20 @@
-{{ range .Paginator.Pages }}
+{{- range .Paginator.Pages -}}
 <div class="shadow p-3 mb-4 bg-white rounded">
 	<h4>
-		<a href="{{ .Permalink }}" class="text-dark">{{ .Title }}</a>
+		<a href="{{- .Permalink -}}" class="text-dark">{{- .Title -}}</a>
 	</h4>
 	<h5>
-		{{ partial "post-metadata.html" . }}
+		{{- partial "post-metadata.html" . -}}
 	</h5>
 	<br>
 	<div class="summary">
-		{{ .Summary }}
+		{{- .Summary -}}
 	</div>
-	{{ range .Params.tags }}
-	<a href="/tags/{{ . | lower }}" class="badge badge-pill badge-info">#{{ . }}</a>
-	{{ end }}
+	{{- range .Params.tags -}}
+	<a href="/tags/{{- . | lower -}}" class="badge badge-pill badge-info">#{{- . -}}</a>
+	{{- end -}}
 </div>
-{{ end }}
+{{- end -}}
 <div class="text-center">
-	{{ template "_internal/pagination.html" . }}
+	{{- template "_internal/pagination.html" . -}}
 </div>

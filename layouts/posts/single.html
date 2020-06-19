@@ -1,21 +1,21 @@
-{{ partial "header.html" . }}
+{{- partial "header.html" . -}}
 <div class="content bg-white p-3 rounded">
-<h3>{{ .Title }}</h3>
+<h3>{{- .Title -}}</h3>
 <h5>
-	{{ partial "post-metadata.html" . }}
+	{{- partial "post-metadata.html" . -}}
 </h5>
 <hr>
 <div class="post-content text-break">
-	{{ .Content }}
+	{{- .Content -}}
 </div>
-{{ partial "copyright.html" . }}
+{{- partial "copyright.html" . -}}
 <hr>
-{{ with .NextInSection }}
+{{- with .NextInSection -}}
 Next: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
 <br>
-{{ end }}
-{{ with .PrevInSection }}
+{{- end -}}
+{{- with .PrevInSection -}}
 Prev: <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-{{ end }}
+{{- end -}}
 </div>
-{{ partial "footer.html" . }}
+{{- partial "footer.html" . -}}
