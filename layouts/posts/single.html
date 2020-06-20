@@ -1,9 +1,7 @@
 {{- partial "header.html" . -}}
 <div class="content bg-white p-3 rounded">
 <h3>{{- .Title -}}</h3>
-<h5>
-	{{- partial "post-metadata.html" . -}}
-</h5>
+{{- partial "post-metadata.html" . -}}
 <hr>
 <div class="post-content text-break">
 	{{- .Content -}}

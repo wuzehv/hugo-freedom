@@ -4,9 +4,9 @@
 		<p class="card-text text-secondary text-center"><small>{{- .Site.Params.slogan -}}</small></p>
 	</div>
 	<ul class="list-group list-group-flush">
-		<li class="list-group-item text-info">文章总数: {{- len .Site.RegularPages -}}篇</li>
-		<li class="list-group-item text-info">共计写了: {{- partial "wordcount.html" . -}}字</li>
-		<li class="list-group-item email">Email: <a href="mailto://{{- .Site.Params.email -}}">{{- .Site.Params.email -}}</a></li>
+		<li class="list-group-item text-info">文章总数: {{ len .Site.RegularPages -}}篇</li>
+		<li class="list-group-item text-info">共计写了: {{ partial "wordcount.html" . -}}字</li>
+		<li class="list-group-item email">Email: <a href="mailto://{{- .Site.Params.email -}}">{{ .Site.Params.email -}}</a></li>
 	</ul>
 </div>
 

@@ -3,10 +3,8 @@
 	<h4>
 		<a href="{{- .Permalink -}}" class="text-dark">{{- .Title -}}</a>
 	</h4>
-	<h5>
-		{{- partial "post-metadata.html" . -}}
-	</h5>
-	<br>
+	{{- partial "post-metadata.html" . -}}
+	<hr>
 	<div class="summary">
 		{{- .Summary -}}
 	</div>
