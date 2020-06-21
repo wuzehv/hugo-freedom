@@ -9,7 +9,7 @@
 		{{- .Summary -}}
 	</div>
 	{{- range .Params.tags -}}
-	<a href="/tags/{{- . | lower -}}" class="badge badge-pill badge-info">#{{- . -}}</a>
+	<a href="/tags/{{- . | lower -}}" class="badge badge-pill badge-info">#{{- . -}}</a>&nbsp;
 	{{- end -}}
 </div>
 {{- end -}}
