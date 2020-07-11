@@ -3,8 +3,10 @@
 {{- $showToc := gt (.TableOfContents | len) 32 -}}
 <div class="col-xl right-sidebar mt-4 {{ if $showToc -}}toc{{- end -}}">
 	{{- if $showToc -}}
-	<h3>Toc</h3>
-	{{- .TableOfContents -}}
+	<div class="bg-white pt-3 pl-3 pr-3 rounded">
+		<h4>目录</h4>
+		{{- .TableOfContents -}}
+	</div>
 	{{- else -}}
 	{{- partial "post-latest.html" . -}}
 	{{- end -}}

@@ -46,17 +46,18 @@ latestLen = 10
 
 # 导航
 [[params.nav.custom]]
-title = "Posts"
+title = "文章"
 url = "/posts"
 
 [[params.nav.custom]]
-title = "Tags"
+title = "标签"
 # url必须为tags，对应默认生成的tags目录(当然代码里面也有部分硬编码)
 url = "/tags"
 
 [[params.nav.custom]]
 title = "Github"
 url = "https://github.com/wuzehv"
+target = "_blank"
 
 # 友情链接
 [[params.link.friends]]

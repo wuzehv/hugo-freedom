@@ -1,12 +1,12 @@
-<div class="card border-0 bg-light">
+<div class="card border-0 rounded">
 	<img class="card-img-top rounded-circle" src="{{- .Site.Params.logo -}}" alt="{{- .Title -}}">
 	<div class="card-body pb-2">
 		<h4>{{- .Site.Params.author -}}</h4>
 		<p class="card-text text-secondary text-center"><small>{{- .Site.Params.slogan -}}</small></p>
 	</div>
 	<ul class="list-group list-group-flush">
-		<li class="list-group-item text-info bg-light">{{ len .Site.RegularPages -}}篇 · {{ partial "wordcount.html" . -}}字</li>
-		<li class="list-group-item email bg-light">
+		<li class="list-group-item text-info">{{ len .Site.RegularPages -}}篇 · {{ partial "wordcount.html" . -}}字</li>
+		<li class="list-group-item email">
 			<a href="mailto://{{- .Site.Params.email -}}">{{ .Site.Params.email -}}</a>
 		</li>
 	</ul>

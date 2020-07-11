@@ -16,11 +16,7 @@
 							<ul class="navbar-nav mr-auto">
 								{{- range .Site.Params.Nav.Custom -}}
 								<li class="nav-item">
-									{{- if or (eq .title "Tags") (eq .title "Posts") -}}
-									<a class="nav-link" href="{{- .url -}}">{{- .title -}}</a>
-									{{- else -}}
-									<a class="nav-link" href="{{- .url -}}" target="_blank">{{- .title -}}</a>
-									{{- end -}}
+									<a class="nav-link font-weight-bold" href="{{- .url -}}" target="{{- .target -}}">{{- .title -}}</a>
 								</li>
 								{{- end -}}
 							</ul>
