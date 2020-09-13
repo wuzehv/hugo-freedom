@@ -1,4 +1,4 @@
-baseURL = "https://liangjun.work"
+baseURL = "https://wuzehui.top"
 title = "Time Machine"
 theme = "hugo-freedom"
 copyright = "©2017-2020"
@@ -36,7 +36,7 @@ slogan = "~人生苦短，何必太认真~"
 description = "一个集技术、折腾、扯淡于一体的博客"
 welcome = "欢迎来到我的时光机!"
 
-ICP = "蒙ICP备18005213号"
+ICP = ""
 icpUrl = "http://beian.miit.gov.cn"
 
 license = "本文章为原创，采用《<a class=\"text-secondary\" rel=\"license\" target=\"_blank\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>》进行许可。"
@@ -82,19 +82,19 @@ title = "摄影"
 desc = "用摄影来记录时光"
 [[params.tag.show]]
 title = "Emacs"
-desc = "反正我是用不明白神的编辑器"
+desc = "神的编辑器"
 [[params.tag.show]]
 title = "杂项"
-desc = "谁还不折腾点啥"
+desc = "穷折腾"
 [[params.tag.show]]
 title = "扯淡"
 desc = "一本正经的胡说八道"
 [[params.tag.show]]
 title = "c语言"
-desc = "我的第一门编译型语言"
+desc = "短小精悍的编程语言"
 [[params.tag.show]]
 title = "Linux"
-desc = "专属极客的操作系统"
+desc = "应用广泛的开源操作系统"
 [[params.tag.show]]
 title = "PHP"
 desc = "不用多说，\"世界上最好的语言是也\""
