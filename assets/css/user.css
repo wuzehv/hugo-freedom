@@ -154,4 +154,7 @@ blockquote {
 	height:0;
 	background-size:100%;
 	background-color:#f1f1f1;
+	border-radius: 5px;
+	box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+	margin-bottom: 1rem;
 }
