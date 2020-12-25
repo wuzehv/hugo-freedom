@@ -1,7 +1,7 @@
 baseURL = "https://wuzehui.top"
 title = "Time Machine"
 theme = "hugo-freedom"
-copyright = "©2017-2020"
+copyright = "©2017"
 
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true

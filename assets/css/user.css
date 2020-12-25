@@ -1,3 +1,7 @@
+body {
+    background-color: #f5f5f5;
+}
+
 @font-face {
 	font-family: "beautiful heart";
 	src : url('../font/beautiful-heart.ttf');
