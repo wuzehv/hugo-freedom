@@ -1,4 +1,4 @@
-baseURL = "https://wuzehui.top"
+baseURL = "https://liangjun.work"
 title = "Time Machine"
 theme = "hugo-freedom"
 copyright = "©2017"
@@ -12,6 +12,8 @@ enableRobotsTXT = true
 [taxonomies]
 tag = "tags"
 
+[markup.goldmark.renderer]
+unsafe = true
 [markup]
 [markup.tableOfContents]
 endLevel = 5
