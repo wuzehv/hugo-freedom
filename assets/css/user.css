@@ -17,6 +17,10 @@ body:not(a) {
 	text-size-adjust: 100%;
 }
 
+.header {
+	max-width: 1070px;
+}
+
 .navbar {
 	padding: 0 !important;
 }
@@ -42,6 +46,11 @@ body:not(a) {
 
 ul.pagination {
 	display: inline-flex;
+}
+
+.main {
+	max-width: 820px;
+	padding-right: 0px;
 }
 
 .content img, .summary img {
