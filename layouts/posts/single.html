@@ -8,12 +8,14 @@
 </div>
 {{- partial "related.html" . -}}
 <hr>
-{{- with .NextInSection -}}
-Next: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+{{- with .PrevInSection -}}
+<ion-icon name="caret-up" style="font-size: 12px;"></ion-icon>
+Prev: <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
 <br>
 {{- end -}}
-{{- with .PrevInSection -}}
-Prev: <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+{{- with .NextInSection -}}
+<ion-icon name="caret-down" style="font-size: 12px;"></ion-icon>
+Next: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
 {{- end -}}
 </div>
 {{- partial "footer.html" . -}}

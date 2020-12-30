@@ -19,9 +19,13 @@
 		<a href="{{- .link -}}" class="list-group-item list-group-item-action flex-column align-items-start">
 			<div class="d-flex w-100 justify-content-between">
 				<h5 class="mb-1">
-					#{{- .title -}} <em class="text-info">({{- .count -}})</em>
+                    <ion-icon name="pricetag" style="font-size: 15px;"></ion-icon>&nbsp;
+					{{- .title -}} <em class="text-info">({{- .count -}})</em>
 				</h5>
-				<small>{{- .date -}}</small>
+				<small>
+                    <ion-icon name="calendar"></ion-icon>&nbsp;
+                    {{- .date -}}
+                </small>
 			</div>
 			<p class="mt-1 mb-1">{{- .desc -}}</p>
 		</a>

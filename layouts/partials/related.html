@@ -1,7 +1,8 @@
 {{- $related := .Site.RegularPages.Related . | first 5 -}}
 {{- with $related -}}
 <hr>
-<p class="font-weight-bold text-info" style="margin-bottom: 0px;">相关文章:</p>
+<p class="font-weight-bold text-info" style="margin-bottom: 0px;">
+    <ion-icon name="link" style="font-size: 13px;"></ion-icon>&nbsp;相关文章:</p>
 <ul>
 	{{- range . -}}
 	<li>

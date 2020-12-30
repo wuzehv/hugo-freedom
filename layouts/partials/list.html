@@ -9,7 +9,10 @@
 		{{- .Summary -}}
 	</div>
 	{{- range .Params.tags -}}
-	<a href="/tags/{{- . | lower -}}" class="badge badge-pill badge-info">#{{- . -}}</a>&nbsp;
+	<a href="/tags/{{- . | lower -}}" class="badge badge-pill badge-info">
+        <ion-icon name="pricetag" style="font-size: 10px;"></ion-icon>&nbsp;
+        {{- . -}}
+    </a>&nbsp;
 	{{- end -}}
 </div>
 {{- end -}}
