@@ -4,10 +4,10 @@
 <p class="font-weight-bold text-info" style="margin-bottom: 0px;">
     <ion-icon name="link" style="font-size: 13px;"></ion-icon>&nbsp;相关文章:</p>
 <ul>
-	{{- range . -}}
-	<li>
-		<a class="text-secondary" href="{{- .Permalink -}}">{{- .Title -}}</a>
-	</li>
-	{{- end -}}
+    {{- range . -}}
+    <li>
+        <a class="text-secondary" href="{{- .Permalink -}}">{{- .Title -}}</a>
+    </li>
+    {{- end -}}
 </ul>
 {{- end -}}

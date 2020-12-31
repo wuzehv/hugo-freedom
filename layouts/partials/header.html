@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		{{- partial "head.html" . -}}
-	</head>
-	<body class="text-dark">
-		<div class="container-fluid">
-			<div class="row justify-content-md-center bg-dark">
-				<header class="col-12 header">
-					<nav class="navbar navbar-expand-md navbar-dark">
-						<a class="navbar-brand" href="{{- site.BaseURL -}}">{{- .Site.Title -}}</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarNav">
-							<ul class="navbar-nav mr-auto">
-								{{- range .Site.Params.Nav.Custom -}}
-								<li class="nav-item">
-									<a class="nav-link font-weight-bold" href="{{- .url -}}" target="{{- .target -}}">{{- .title -}}</a>
-								</li>
-								{{- end -}}
-							</ul>
-							<div class="form-inline my-2 my-lg-0">
-								<input class="form-control mr-sm-2" id="search-input" placeholder="Search" aria-label="Search">
-                                <ion-icon name="search-circle" id="search-btn" style="font-size: 40px;margin-left: -50px;"></ion-icon>
-							</div>
-						</div>
-					</nav>
-				</header>
-			</div>
-			<div class="row justify-content-md-center">
-				<main class="col-12 mt-2 no-gutters main">
+    <head>
+        {{- partial "head.html" . -}}
+    </head>
+    <body class="text-dark">
+        <div class="container-fluid">
+            <div class="row justify-content-md-center bg-dark">
+                <header class="col-12 header">
+                    <nav class="navbar navbar-expand-md navbar-dark">
+                        <a class="navbar-brand" href="{{- site.BaseURL -}}">{{- .Site.Title -}}</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mr-auto">
+                                {{- range .Site.Params.Nav.Custom -}}
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-bold" href="{{- .url -}}" target="{{- .target -}}">{{- .title -}}</a>
+                                </li>
+                                {{- end -}}
+                            </ul>
+                            <div class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" id="search-input" placeholder="Search" aria-label="Search">
+                                <ion-icon name="search-circle" id="search-btn" style="font-size: 40px;margin-left: -50px; cursor: pointer;"></ion-icon>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+            <div class="row justify-content-md-center">
+                <main class="col-12 mt-2 no-gutters main">

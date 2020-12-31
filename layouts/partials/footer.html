@@ -2,18 +2,18 @@
 {{- partial "right-sidebar.html" . -}}
 </div>
 <div class="row justify-content-md-center">
-	<footer class="col alert text-center mb-0" role="alert">
-		<a href="javascript:;" class="text-secondary">{{- .Site.Copyright -}}-{{- now.Format "2006" -}}&nbsp;{{- .Site.Params.Author -}}</a>
-		{{- if site.Params.ICP }}
-		| <a href="{{- .Site.Params.IcpUrl -}}" target="_blank" class="text-secondary">{{- .Site.Params.ICP -}}</a>
-		{{- end -}}
-		<br>
-		Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
+    <footer class="col alert text-center mb-0" role="alert">
+        <a href="javascript:;" class="text-secondary">{{- .Site.Copyright -}}-{{- now.Format "2006" -}}&nbsp;{{- .Site.Params.Author -}}</a>
+        {{- if site.Params.ICP }}
+        | <a href="{{- .Site.Params.IcpUrl -}}" target="_blank" class="text-secondary">{{- .Site.Params.ICP -}}</a>
+        {{- end -}}
+        <br>
+        Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
         <br>
         <a href="mailto:{{- .Site.Params.Email -}}" target="_blank"><ion-icon name="mail"></ion-icon></a>&nbsp;
         <a href="{{- .Site.Params.Github -}}" target="_blank"><ion-icon name="logo-github"></ion-icon></a>&nbsp;
         <a href="/index.xml" target="_blank"><ion-icon name="logo-rss"></ion-icon></a>
-	</footer>
+    </footer>
 </div>
 </div>
 {{- partial "script.html" . -}}

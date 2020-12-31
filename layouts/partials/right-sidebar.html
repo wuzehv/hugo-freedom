@@ -2,12 +2,12 @@
 <!-- <nav id="TableOfContents"></nav> -->
 {{- $showToc := gt (.TableOfContents | len) 32 -}}
 <div class="col-xl right-sidebar ml-2 mt-2 {{ if $showToc -}}toc{{- end -}}" style="padding-left: 0px;">
-	{{- if $showToc -}}
-	<div class="bg-white pt-3 pl-3 pr-3 rounded">
-		<h4><ion-icon name="list" style="font-size: 17px;"></ion-icon>&nbsp;目录</h4>
-		{{- .TableOfContents -}}
-	</div>
-	{{- else -}}
-	{{- partial "post-latest.html" . -}}
-	{{- end -}}
+    {{- if $showToc -}}
+    <div class="bg-white pt-3 pl-3 pr-3 rounded">
+        <h4><ion-icon name="list" style="font-size: 17px;"></ion-icon>&nbsp;目录</h4>
+        {{- .TableOfContents -}}
+    </div>
+    {{- else -}}
+    {{- partial "post-latest.html" . -}}
+    {{- end -}}
 </div>

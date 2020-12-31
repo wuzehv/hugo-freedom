@@ -1,21 +1,21 @@
 {{- range .Paginator.Pages -}}
 <div class="shadow-sm p-3 mb-2 bg-white rounded">
-	<h4>
-		<a href="{{- .Permalink -}}" class="text-dark">{{- .Title -}}</a>
-	</h4>
-	{{- partial "post-metadata.html" . -}}
-	<hr>
-	<div class="summary">
-		{{- .Summary -}}
-	</div>
-	{{- range .Params.tags -}}
-	<a href="/tags/{{- . | lower -}}" class="badge badge-pill badge-info">
+    <h4>
+        <a href="{{- .Permalink -}}" class="text-dark">{{- .Title -}}</a>
+    </h4>
+    {{- partial "post-metadata.html" . -}}
+    <hr>
+    <div class="summary">
+        {{- .Summary -}}
+    </div>
+    {{- range .Params.tags -}}
+    <a href="/tags/{{- . | lower -}}" class="badge badge-pill badge-info">
         <ion-icon name="pricetag" style="font-size: 10px;"></ion-icon>&nbsp;
         {{- . -}}
     </a>&nbsp;
-	{{- end -}}
+    {{- end -}}
 </div>
 {{- end -}}
 <div class="text-center overflow-auto">
-	{{- template "_internal/pagination.html" . -}}
+    {{- template "_internal/pagination.html" . -}}
 </div>
