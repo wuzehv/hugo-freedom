@@ -35,8 +35,8 @@ dateFormat = "2006-01-02"
 logo = "/images/cat.jpeg"
 slogan = "~人生苦短，何必太认真~"
 
-description = "一个集技术、折腾、扯淡于一体的博客"
-welcome = "欢迎来到我的时光机!"
+description = "这是一个非常普通的小站，我也是一名普普通通的程序员<br>日子还长，放轻松~"
+welcome = "是什么让我们在这里相遇？"
 
 ICP = ""
 icpUrl = "http://beian.miit.gov.cn"
