@@ -34,7 +34,7 @@ dateFormat = "2006-01-02"
 # 显示在左侧sidebar logo下面
 logo = "/images/cat.jpeg"
 slogan = "~人生苦短，何必太认真~"
-welcome = "网站标签：非常普通；极其无聊；瞎折腾"
+welcome = "一个平平无奇的博客"
 
 description = "一个包含技术、折腾和扯淡的网站"
 
