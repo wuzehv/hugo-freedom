@@ -34,9 +34,9 @@ dateFormat = "2006-01-02"
 # 显示在左侧sidebar logo下面
 logo = "/images/cat.jpeg"
 slogan = "~人生苦短，何必太认真~"
+welcome = "网站标签：非常普通；极其无聊；瞎折腾"
 
-description = "这是一个非常普通的小站，我也是一名普普通通的程序员<br>日子还长，放轻松~"
-welcome = "是什么让我们在这里相遇？"
+description = "一个包含技术、折腾和扯淡的网站"
 
 ICP = ""
 icpUrl = "http://beian.miit.gov.cn"

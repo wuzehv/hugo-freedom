@@ -1,23 +1,32 @@
-{{- partial "header.html" . -}}
-<div class="alert alert-success">
-    <small>本站主题是自己写的<a href="https://github.com/wuzehv/hugo-freedom" target="_blank">hugo-freedom</a>，基于Bootstrap 4，未提交到官方仓库，欢迎喜欢折腾的朋友fork</small>
-</div>
-
-<div class="jumbotron">
-    <h1 class="display-4">Hello!</h1>
-    <p class="lead">
-        {{- .Site.Params.Welcome -}}<br><br>
-        {{- .Site.Params.Description -}}<br>
-    </p>
-</div>
-
-<div class="card">
-    <h6 class="card-header">友情链接</h6>
-    {{- range .Site.Params.Link.Friends -}}
-    <div class="card-body pb-1 pt-2">
-        <h7 class="card-title"><a href="{{- .url -}}" target="_blank">{{- .title -}}</a></h7>
-        <p class="card-text"><small>{{- .slogan -}}</small></p>
-    </div>
-    {{- end -}}
-</div>
-{{- partial "footer.html" . -}}
+<html>
+    <head>
+        {{- partial "head.html" . -}}
+    </head>
+    <body class="bg-white">
+        <div class="container">
+            <div class="row align-items-center"  style="height: 70vh;">
+                <div class="col"></div>
+                <div class="col align-self-center">
+                    <div class="text-center">
+                        <img src="{{- .Site.Params.Logo -}}" style="width: 150px; height: 150px;" class="rounded-circle img-thumbnail">
+                        <div class="pb-2"></div>
+                        <p class="font-weight-light mb-1">
+                            {{- .Site.Params.Slogan -}}
+                        </p>
+                        <small class="text-muted font-italic">
+                            {{- .Site.Params.Welcome -}}
+                        </small>
+                        <div class="pb-1"></div>
+                        <div style="font-size:20px;">
+                            <a href="/posts" title="blog"><ion-icon name="book-outline"></ion-icon></a>&nbsp;
+                            <a href="/tags" title="tags"><ion-icon name="pricetags-outline"></ion-icon></a>&nbsp;&nbsp;
+                            {{- partial "footer-links.html" . -}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        {{- partial "script.html" . -}}
+    </body>
+</html>

@@ -7,15 +7,7 @@
 {{- $keywords = $keywords | append (slice .Page.Title) -}}
 {{- end -}}
 <meta name="keywords" content="{{- delimit $keywords ", " -}}">
-
 <meta name="description" content="{{- .Site.Params.description -}}">
-
-<meta property="og:url" content="{{- .Permalink | absURL -}}">
-<meta property="og:title" content="{{- $isHomePage := eq .Title .Site.Title -}}{{- .Title -}}{{- if eq $isHomePage false -}} - {{- .Site.Title -}}{{- end -}}">
-<meta property="og:description" content="{{- $isHomePage := eq .Title .Site.Title -}}{{- .Site.Params.description -}}{{- if eq $isHomePage false -}} - {{- .Summary -}}{{- end -}}">
-{{- if isset .Params "tags" -}}
-<meta property="og:tag" content="{{- delimit .Params.Tags ", " -}}">
-{{- end -}}
 
 <!-- BEGIN CSS -->
 {{- partial "css-assets.html" . -}}
