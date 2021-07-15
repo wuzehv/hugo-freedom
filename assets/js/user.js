@@ -109,9 +109,3 @@ $('table').attr('class', 'table table-bordered table-striped table-dark');
 
 	Search.bind();
 })();
-
-// 图片lazyload
-$(".lazyload-img").lazyload({
-	effect: "fadeIn",
-	effect_params: [500]
-});
