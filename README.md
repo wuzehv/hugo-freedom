@@ -1,7 +1,7 @@
 # hugo-freedom主题
 
 ### 在线预览
-[我的博客](https://liangjun.work)
+[我的博客](https://mutex.top)
 
 布局框架
 ```
