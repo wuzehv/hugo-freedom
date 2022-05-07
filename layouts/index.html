@@ -4,9 +4,9 @@
     </head>
     <body class="bg-white">
         <div class="container">
-            <div class="row align-items-center"  style="height: 70vh;">
+            <div class="row align-items-center"  style="height: 100%;">
                 <div class="col"></div>
-                <div class="col align-self-center">
+                <div class="col align-self-center" style="height: 60vh;">
                     <div class="text-center">
                         <img src="{{- .Site.Params.Logo -}}" style="width: 150px; height: 150px;border: solid 1px #E4E4E4;" class="rounded-circle p-1">
                         <div class="pb-2"></div>
@@ -27,6 +27,16 @@
                 <div class="col"></div>
             </div>
         </div>
-        {{- partial "script.html" . -}}
+	<div class="row justify-content-md-center">
+	    <footer class="col alert text-center mb-0" role="alert" style="margin-top: -90px;">
+		<a href="javascript:;" class="text-secondary">{{- .Site.Copyright -}}-{{- now.Format "2006" -}}&nbsp;{{- .Site.Params.Author -}}</a>
+		{{- if site.Params.ICP }}
+		| <a href="{{- .Site.Params.IcpUrl -}}" target="_blank" class="text-secondary">{{- .Site.Params.ICP -}}</a>
+		{{- end -}}
+		<br>
+		Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> | Theme <a href="https://github.com/wuzehv/hugo-freedom" target="_blank">Freedom</a>
+	    </footer>
+	</div>
+	{{- partial "script.html" . -}}
     </body>
 </html>
