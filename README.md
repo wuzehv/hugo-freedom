@@ -1,7 +1,7 @@
 # hugo-freedom主题
 
 ### 在线预览
-[我的博客](https://liangjun.work)
+[我的博客](https://mutex.top)
 
 布局框架
 ```
@@ -28,6 +28,7 @@ footer
 ```
 cd sitedir
 git clone https://github.com/wuzehv/hugo-freedom.git themes/hugo-freedom
+cp themes/hugo-freedom/config.example.toml ../../config.toml
 ```
 
 ### 配置示例
