@@ -42,7 +42,7 @@ description = "一个包含技术、折腾和扯淡的网站"
 ICP = "京ICP备2021036734号"
 # 备案的网站title
 icpTitle = "技术学习生活分享"
-icpUrl = "http://beian.miit.gov.cn"
+icpUrl = "https://beian.miit.gov.cn/"
 
 github = "https://github.com/wuzehv"
 
