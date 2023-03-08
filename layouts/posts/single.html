@@ -5,6 +5,9 @@
 <hr>
 <div class="post-content text-break">
     {{- .Content -}}
+    {{- with .Site.Param.ShowLicense -}}
+        {{- partial "copyright.html" . -}}
+    {{- end -}}
 </div>
 {{- partial "related.html" . -}}
 <hr>
