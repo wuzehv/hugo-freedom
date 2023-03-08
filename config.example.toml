@@ -38,7 +38,10 @@ welcome = "一个平平无奇的博客"
 
 description = "一个包含技术、折腾和扯淡的网站"
 
-ICP = ""
+# 备案号
+ICP = "京ICP备2021036734号"
+# 备案的网站title
+icpTitle = ""
 icpUrl = "http://beian.miit.gov.cn"
 
 github = "https://github.com/wuzehv"

@@ -28,7 +28,7 @@ footer
 ```
 cd sitedir
 git clone https://github.com/wuzehv/hugo-freedom.git themes/hugo-freedom
-cp themes/hugo-freedom/config.example.toml ../../config.toml
+cp themes/hugo-freedom/config.example.toml config.toml
 ```
 
 ### 配置示例
