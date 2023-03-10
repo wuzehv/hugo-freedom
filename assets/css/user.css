@@ -168,3 +168,28 @@ blockquote {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
     margin-bottom: 1rem;
 }
+
+/* 返回顶部 */
+.top {
+    --offset: 100px;
+
+    position: sticky;
+    bottom: 20px;
+    margin-right: 10px;
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+
+    width: 40px;
+    aspect-ratio: 1;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 0;
+}
+.top:before {
+    content: "";
+    position: absolute;
+    inset: 30%;
+    transform: translateY(20%) rotate(-45deg);
+    border-top: 5px solid #f5f5f5;
+    border-right: 5px solid #f5f5f5;
+}
