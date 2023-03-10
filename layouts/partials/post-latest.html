@@ -1,5 +1,5 @@
 <ul class="list-group">
-    <li href="#" class="list-group-item list-group-item-action active bg-info border-0">
+    <li href="#" class="list-group-item list-group-item-action active bg-dark border-0">
         最新文章
     </li>
     {{- range first .Site.Params.latestLen (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) -}}

@@ -1,6 +1,21 @@
 // 动态添加表格样式
 $('table').attr('class', 'table table-bordered table-striped table-dark');
 
+$(function () {
+	$(window).scroll(function () {
+		var scrollt = document.documentElement.scrollTop + document.body.scrollTop;
+		if (scrollt > 200) {
+			$("#top").fadeIn(200);
+		} else {
+			$("#top").stop().fadeOut(200);
+		}
+	});
+	
+	$("#top").click(function () {
+		$("html,body").animate({scrollTop: "0px"}, 400);
+	});
+});
+
 // 搜索功能
 (function() {
 	var Search = {

@@ -170,26 +170,23 @@ blockquote {
 }
 
 /* 返回顶部 */
-.top {
-    --offset: 100px;
-
-    position: sticky;
-    bottom: 20px;
-    margin-right: 10px;
-    place-self: end;
-    margin-top: calc(100vh + var(--offset));
-
+#top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
     width: 40px;
+    height: 40px;
     aspect-ratio: 1;
     background: #fff;
     border-radius: 10px;
     font-size: 0;
+    box-shadow: rgba(18, 18, 18, 0.1) 0 1px 3px;
 }
-.top:before {
+#top:before {
     content: "";
     position: absolute;
     inset: 30%;
     transform: translateY(20%) rotate(-45deg);
-    border-top: 5px solid #f5f5f5;
-    border-right: 5px solid #f5f5f5;
+    border-top: 5px solid #ddd;
+    border-right: 5px solid #ddd;
 }
